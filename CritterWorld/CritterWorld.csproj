@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20A7F7FA-23E6-41C2-A4A3-E973DE9C5835}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CritterWorld</RootNamespace>
+    <AssemblyName>CritterWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>CritterWorld.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Competition\Competition.cs" />
+    <Compile Include="Competition\CompetitionDefault.cs" />
+    <Compile Include="Competition\Level.cs" />
+    <Compile Include="Configuration\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="CritterWorldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CritterWorldForm.Designer.cs">
+      <DependentUpon>CritterWorldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CritterWrapper.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Sprite\AnimationFramesInMultipleFiles.cs" />
+    <Compile Include="Sprite\AnimationFramesInOneFile.cs" />
+    <Compile Include="Sprite\Sprite.cs" />
+    <Compile Include="Sprite\SpriteCollection.cs" />
+    <Compile Include="Sprite\SpriteEnvironment.cs" />
+    <Compile Include="Sprite\SpriteImage.cs" />
+    <Compile Include="Sprite\SpriteImageMultipleFiles.cs" />
+    <Compile Include="Sprite\SpriteImageOneFile.cs" />
+    <Compile Include="Things\Poop.cs" />
+    <Compile Include="Things\Goal.cs" />
+    <Compile Include="Leaderboard.cs" />
+    <Compile Include="Widgets\MarqueeLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\MarqueeLabel.Designer.cs">
+      <DependentUpon>MarqueeLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MessageNotifyBlockedByTerrain.cs" />
+    <Compile Include="Messages\MessageNotifyCloseToObject.cs" />
+    <Compile Include="Messages\MessageNotifyBumped.cs" />
+    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Things\Food.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Version.cs" />
+    <Compile Include="World.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Things\Critter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Widgets\WorldPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Configuration\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CritterWorldForm.resx">
+      <DependentUpon>CritterWorldForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\MarqueeLabel.resx">
+      <DependentUpon>MarqueeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\World.CritterWrapper.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Things\VisibleMovableObject.cs" />
+    <Compile Include="Things\VisibleObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CritterBrains\CritterBrains.csproj">
+      <Project>{C9BC9344-AAD7-4EC2-850D-F82C557F7190}</Project>
+      <Name>CritterBrains</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Robo0_01.png" />
+    <EmbeddedResource Include="Images\Robo0_02.png" />
+    <EmbeddedResource Include="Images\Robo1_01.png" />
+    <EmbeddedResource Include="Images\Robo1_02.png" />
+    <EmbeddedResource Include="Images\Robo2_01.png" />
+    <EmbeddedResource Include="Images\Robo2_02.png" />
+    <EmbeddedResource Include="Images\Robo3_01.png" />
+    <EmbeddedResource Include="Images\Robo3_02.png" />
+    <EmbeddedResource Include="Images\Robo4_01.png" />
+    <EmbeddedResource Include="Images\Robo4_02.png" />
+    <EmbeddedResource Include="Images\Robo5_01.png" />
+    <EmbeddedResource Include="Images\Robo5_02.png" />
+    <EmbeddedResource Include="Images\Robo6_01.png" />
+    <EmbeddedResource Include="Images\Robo6_02.png" />
+    <EmbeddedResource Include="Images\Robo7_01.png" />
+    <EmbeddedResource Include="Images\Robo7_02.png" />
+    <EmbeddedResource Include="Images\Robo8_01.png" />
+    <EmbeddedResource Include="Images\Robo8_02.png" />
+    <EmbeddedResource Include="Images\Robo9_01.png" />
+    <EmbeddedResource Include="Images\Robo9_02.png" />
+    <EmbeddedResource Include="Images\RoboSelected_01.png" />
+    <EmbeddedResource Include="Images\RoboSelected_02.png" />
+    <EmbeddedResource Include="Images\RoboZap_01.png" />
+    <EmbeddedResource Include="Images\RoboZap_02.png" />
+    <EmbeddedResource Include="Images\RoboZap_03.png" />
+    <EmbeddedResource Include="Images\RoboZap_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Kiwi-Fruit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\DeadCritter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Background01b.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\WinnerCritter.png" />
+    <EmbeddedResource Include="Images\Goal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Background01.png" />
+    <EmbeddedResource Include="Images\Background02.png" />
+    <EmbeddedResource Include="Images\BackgroundBase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\CritterWaiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Background03.png" />
+    <EmbeddedResource Include="Images\Background04.png" />
+    <EmbeddedResource Include="Images\Background05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Background06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ballcache.png" />
+    <EmbeddedResource Include="Images\bomb.png" />
+    <EmbeddedResource Include="Images\gift.png" />
+    <EmbeddedResource Include="Images\poop.png" />
+    <EmbeddedResource Include="Images\tennisball.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
